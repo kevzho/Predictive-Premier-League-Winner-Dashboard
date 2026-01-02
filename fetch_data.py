@@ -6,8 +6,11 @@ import requests
 
 from datetime import datetime
 
-#our data directory
-DATA_DIR = "data"
+#our data directory (place `data` next to this script)
+BASE_DIR = os.path.dirname(__file__)
+DATA_DIR = os.path.join(BASE_DIR, "data")
+# ensure the data directory exists so writing won't raise FileNotFoundError
+os.makedirs(DATA_DIR, exist_ok=True)
 
 ''' For future use, possibly, if we were to scrape multiple seasons
 def season_codes_candidates():
@@ -27,7 +30,7 @@ def season_codes_candidates():
 #gets the csv from football-data.co.uk for given season and league
 def download_fdc_csv(season_code = "2526", league = "E0"):
     url = f"https://www.football-data.co.uk/mmz4281/{season_code}/{league}.csv"
-    out = f"{DATA_DIR}/{league}_{season_code}.csv"
+    out = os.path.join(DATA_DIR, f"{league}_{season_code}.csv")
     
     print("Downloading: ", url)
     # set timeout to 10 seconds
