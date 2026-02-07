@@ -27,7 +27,7 @@
 
 
 ### Schema:
-project-root/
+  project-root/
 ├─ data/ # Raw and processed data
 │ ├─ bbc_raw.html
 │ ├─ E0_2526.csv
@@ -45,6 +45,15 @@ project-root/
 ├─ LICENSE
 ├─ README.md
 └─ requirements.txt
+
+    .
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── docs                    # Documentation files (alternatively `doc`)
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    ├── test                    # Automated tests (alternatively `spec` or `tests`)
+    ├── tools                   # Tools and utilities
+    ├── LICENSE
+    └── README.md
 
 #### Descriptions:
 - All analysis notebooks are located in the `notebooks/` subfolder.
