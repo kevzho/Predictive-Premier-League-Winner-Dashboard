@@ -1,0 +1,21 @@
+Team,Pts,GD,Pts_zscore,GD_zscore,Pts_pct,GD_pct,Strength
+Arsenal,50,25,1.89,1.93,100.0,95.0,Strong
+Aston Villa,46,10,1.48,0.77,92.5,85.0,Strong
+Man City,46,26,1.48,2.0,92.5,100.0,Strong
+Man United,38,7,0.67,0.54,85.0,80.0,Above Average
+Chelsea,37,14,0.57,1.08,80.0,90.0,Above Average
+Liverpool,36,3,0.46,0.23,75.0,70.0,Above Average
+Fulham,34,0,0.26,0.0,70.0,50.0,Above Average
+Everton,33,-1,0.16,-0.08,57.5,45.0,Above Average
+Sunderland,33,-2,0.16,-0.15,57.5,40.0,Above Average
+Newcastle,33,3,0.16,0.23,57.5,70.0,Above Average
+Brentford,33,3,0.16,0.23,57.5,70.0,Above Average
+Brighton,30,2,-0.15,0.15,42.5,57.5,Average
+Bournemouth,30,-5,-0.15,-0.39,42.5,30.0,Average
+Tottenham,28,2,-0.35,0.15,32.5,57.5,Average
+Crystal Palace,28,-4,-0.35,-0.31,32.5,35.0,Average
+Leeds,26,-7,-0.55,-0.54,25.0,25.0,Average
+Nott'm Forest,25,-11,-0.66,-0.85,20.0,20.0,Average
+West Ham,20,-18,-1.17,-1.39,15.0,15.0,Weak
+Burnley,15,-19,-1.68,-1.46,10.0,10.0,Weak
+Wolves,8,-28,-2.39,-2.16,5.0,5.0,Weak

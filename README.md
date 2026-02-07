@@ -24,3 +24,7 @@
 - Current standings
 - Form (Last 5 wins)
 - SPI Standings (If we can access)
+
+
+### Schema:
+- All analysis notebooks are located in the `notebooks/` subfolder.
