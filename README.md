@@ -37,12 +37,14 @@
     ├── notebook-viz/
     │   ├── match-level-eda.ipynb
     │   ├── table-level-eda.ipynb
+    │   ├── power-rankings-viz.ipynb
     │   ├── betting-odds-analysis.ipynb
-    │   └── README.md #readme for data EDA and visualization
+    │   └── README.md                       #readme for data EDA and visualization
     ├── output/
     ├── src/
     │   ├── config.py
-    │   ├── elo.py
+    │   ├── elo.py                          #generate elo's
+    │   ├── elo_run.py                      #generates elo's
     │   ├── fetch_data.py
     │   └── load_data.py
     ├── app.py
