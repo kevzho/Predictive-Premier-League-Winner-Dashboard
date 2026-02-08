@@ -1,4 +1,5 @@
-# Dashboard Creation
+![Alt text describing the image](img/pl.png)
+# PLForecast - Premier League Prediction Dashboard (WIP)
 
 - Predicts the probability that each Premier League team will win the league
 - Updates live using match results / standings
