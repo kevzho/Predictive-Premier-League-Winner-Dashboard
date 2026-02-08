@@ -57,7 +57,9 @@
 - All analysis notebooks are located in  `notebook-viz/`.
 - Logic and data-fetching will be located in `src/`.
 
-### **NOTICE**
+---
+
+### **NOTICE**:
 
 This project uses football data for educational and demonstration purposes.
 
