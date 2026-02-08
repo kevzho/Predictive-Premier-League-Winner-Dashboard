@@ -27,24 +27,29 @@
 
 
 ### Schema:
-    project-root/
+    ./
     ├── data/
     │   ├── bbc_raw.html
+    │   ├── EO_2526_raw.json #json file
     │   ├── E0_2526.csv
     │   ├── results_25-26.csv
     │   └── summary_table2526.csv
-    ├── notebooks/
+    ├── notebook-viz/
     │   ├── match-level-eda.ipynb
     │   ├── table-level-eda.ipynb
-    │   └── betting-odds-analysis.ipynb
+    │   ├── betting-odds-analysis.ipynb
+    │   └── README.md #readme for data EDA and visualization
     ├── output/
+    ├── src/
+    │   ├── config.py
+    │   ├── elo.py
+    │   ├── fetch_data.py
+    │   └── load_data.py
     ├── app.py
-    ├── elo.py
-    ├── fetch_data.py
-    ├── simulate.py
     ├── LICENSE
     ├── README.md
     └── requirements.txt
 
 #### Descriptions:
-- All analysis notebooks are located in the `notebooks/` subfolder.
+- All analysis notebooks are located in  `notebook-viz/`.
+- Logic and data-fetching will be located in `src/`.
