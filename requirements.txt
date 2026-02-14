@@ -1,7 +1,7 @@
 #data science core
 pandas==2.0.3
 numpy==1.24.3
-#scipy==1.11.1
+scipy==1.11.1
 
 #viz
 plotly==5.17.0
