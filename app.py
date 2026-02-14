@@ -203,7 +203,7 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True)
 
 #Position Distribution Heatmap
-st.header("🎯 Position Distribution Heatmap")
+st.header("Position Distribution Heatmap")
 
 #Prepare data for heatmap
 pos_data = []
