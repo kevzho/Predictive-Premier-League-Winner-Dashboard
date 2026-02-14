@@ -1,5 +1,5 @@
 #core monte-carlo engine
-
+from tqdm import tqdm
 import random
 from copy import deepcopy
 
@@ -31,7 +31,7 @@ def simulate_season(
     total_points = {team: 0 for team in teams}
 
     #iterate through # of simulations
-    for _ in range(n_sims):
+    for n in tqdm(range(n_sims), desc="Simulating seasons"):
         #make copy of current table to update during simulation
         table_copy = deepcopy(current_table)
 
