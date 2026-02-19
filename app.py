@@ -8,10 +8,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from src.config import N_SIMULATIONS
 
 #import modules
 from data_processor import load_simulation_data, format_probability, get_top_teams, get_bottom_teams
-from cache_manager import load_simulation_results, save_simulation_results, clear_cache
+from cache_manager import load_simulation_results, save_simulation_results, clear_cache, get_cache_key
 
 #configure streamlit page
 st.set_page_config(
@@ -32,7 +33,12 @@ with st.sidebar:
     st.subheader("Cache")
     
     #attempt to load cached data first
-    cached_data = load_simulation_results(max_age_hours=24)
+    cache_key = get_cache_key(
+        data_source="2526",
+        params={"num_simulations": N_SIMULATIONS}
+    )
+
+    cached_data = load_simulation_results(cache_key=cache_key)
     
     if cached_data:
         st.success(f"✔ Loaded from cache")
@@ -43,8 +49,14 @@ with st.sidebar:
         #load from csv using function
         data = load_simulation_data()
         #save to cache
-        save_simulation_results(data)
-    
+        cache_key = get_cache_key(
+            data_source="2526",
+            params={"num_simulations": data['metadata']['num_simulations']}
+        )
+
+        # Save to cache
+        save_simulation_results(data, cache_key=cache_key)
+            
     #refresh button enforcing cache clear & rerun
     if st.button("⟳ Force Refresh"):
         clear_cache()

@@ -54,6 +54,8 @@ def simulate_season(
             update_table(table_copy, home, away, result)
 
         final_table = rank_table(table_copy)
+        if n == 1:
+            print(final_table)
 
         #Find the winner of the premier league in this simulation
         champion = final_table[0][0]

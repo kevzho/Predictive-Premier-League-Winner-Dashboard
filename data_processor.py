@@ -78,6 +78,8 @@ def load_simulation_data(csv_path="data/simulation_results_2526.csv"):
     for cleaned_team, original_team in zip(cleaned_teams, original_teams):
         try:
             results['title_prob'][cleaned_team] = float(df.loc['title_prob', original_team])
+            if cleaned_team == "Arsenal":
+                logger.info(f"Arsenal title_prob loaded as {results['title_prob'][cleaned_team]}")
             results['top4_prob'][cleaned_team] = float(df.loc['top4_prob', original_team])
             results['relegation_prob'][cleaned_team] = float(df.loc['relegation_prob', original_team])
             results['expected_points'][cleaned_team] = float(df.loc['expected_points', original_team])
@@ -92,7 +94,7 @@ def load_simulation_data(csv_path="data/simulation_results_2526.csv"):
     # Validate data
     logger.info(f"✅ Loaded data for {len(results['teams'])} teams")
     logger.info(f"Title probability sum: {sum(results['title_prob'].values()):.2f}")
-    
+
     return results
 
 def format_probability(p):
