@@ -1,13 +1,4 @@
 HomeTeam,AwayTeam,Date
-Aston Villa,Leeds,2026-02-21
-Brentford,Brighton,2026-02-21
-Chelsea,Burnley,2026-02-21
-West Ham,Bournemouth,2026-02-21
-Man City,Newcastle,2026-02-21
-Crystal Palace,Wolves,2026-02-22
-Nott'm Forest,Liverpool,2026-02-22
-Sunderland,Fulham,2026-02-22
-Tottenham,Arsenal,2026-02-22
 Everton,Man United,2026-02-23
 Wolves,Aston Villa,2026-02-27
 Bournemouth,Sunderland,2026-02-28
@@ -15,13 +6,13 @@ Burnley,Brentford,2026-02-28
 Liverpool,West Ham,2026-02-28
 Newcastle,Everton,2026-02-28
 Leeds,Man City,2026-02-28
-Man United,Crystal Palace,2026-03-01
 Brighton,Nott'm Forest,2026-03-01
 Fulham,Tottenham,2026-03-01
+Man United,Crystal Palace,2026-03-01
 Arsenal,Chelsea,2026-03-01
-Bournemouth,Brentford,2026-03-03
 Everton,Burnley,2026-03-03
 Leeds,Sunderland,2026-03-03
+Bournemouth,Brentford,2026-03-03
 Wolves,Liverpool,2026-03-03
 Aston Villa,Chelsea,2026-03-04
 Brighton,Arsenal,2026-03-04
@@ -30,13 +21,13 @@ Man City,Nott'm Forest,2026-03-04
 Newcastle,Man United,2026-03-04
 Tottenham,Crystal Palace,2026-03-05
 West Ham,Man City,2026-03-14
-Sunderland,Brighton,2026-03-14
-Nott'm Forest,Fulham,2026-03-14
 Burnley,Bournemouth,2026-03-14
 Crystal Palace,Leeds,2026-03-14
+Nott'm Forest,Fulham,2026-03-14
+Sunderland,Brighton,2026-03-14
 Chelsea,Newcastle,2026-03-14
-Arsenal,Everton,2026-03-15
 Man United,Aston Villa,2026-03-15
+Arsenal,Everton,2026-03-15
 Liverpool,Tottenham,2026-03-15
 Brentford,Wolves,2026-03-16
 Bournemouth,Man United,2026-03-20
@@ -46,28 +37,28 @@ Fulham,Burnley,2026-03-21
 Everton,Chelsea,2026-03-21
 Leeds,Brentford,2026-03-21
 Newcastle,Sunderland,2026-03-22
-Tottenham,Nott'm Forest,2026-03-22
 Aston Villa,West Ham,2026-03-22
+Tottenham,Nott'm Forest,2026-03-22
 West Ham,Wolves,2026-04-11
-Arsenal,Bournemouth,2026-04-11
-Brentford,Everton,2026-04-11
-Burnley,Brighton,2026-04-11
-Crystal Palace,Newcastle,2026-04-11
-Chelsea,Man City,2026-04-11
-Liverpool,Fulham,2026-04-11
-Man United,Leeds,2026-04-11
-Nott'm Forest,Aston Villa,2026-04-11
 Sunderland,Tottenham,2026-04-11
-Newcastle,Bournemouth,2026-04-18
+Nott'm Forest,Aston Villa,2026-04-11
+Man United,Leeds,2026-04-11
+Liverpool,Fulham,2026-04-11
+Brentford,Everton,2026-04-11
+Crystal Palace,Newcastle,2026-04-11
+Burnley,Brighton,2026-04-11
+Arsenal,Bournemouth,2026-04-11
+Chelsea,Man City,2026-04-11
 Man City,Arsenal,2026-04-18
 Tottenham,Brighton,2026-04-18
 Nott'm Forest,Burnley,2026-04-18
+Newcastle,Bournemouth,2026-04-18
 Leeds,Wolves,2026-04-18
-Aston Villa,Sunderland,2026-04-18
+Everton,Liverpool,2026-04-18
 Chelsea,Man United,2026-04-18
 Crystal Palace,West Ham,2026-04-18
 Brentford,Fulham,2026-04-18
-Everton,Liverpool,2026-04-18
+Aston Villa,Sunderland,2026-04-18
 Wolves,Tottenham,2026-04-25
 West Ham,Everton,2026-04-25
 Sunderland,Nott'm Forest,2026-04-25
@@ -89,9 +80,9 @@ Aston Villa,Tottenham,2026-05-02
 Arsenal,Fulham,2026-05-02
 Chelsea,Nott'm Forest,2026-05-02
 Nott'm Forest,Newcastle,2026-05-09
+West Ham,Arsenal,2026-05-09
 Sunderland,Man United,2026-05-09
 Tottenham,Leeds,2026-05-09
-West Ham,Arsenal,2026-05-09
 Man City,Brentford,2026-05-09
 Crystal Palace,Everton,2026-05-09
 Fulham,Bournemouth,2026-05-09

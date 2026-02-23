@@ -59,5 +59,5 @@ def main(force_refresh=False):
 
 if __name__ == "__main__":
     #set force_refresh=True to bypass cache and get fresh data - set to true when matchweek changes
-    main(force_refresh=False)
+    main(force_refresh=True)
     
