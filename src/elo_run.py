@@ -2,7 +2,11 @@ from elo import compute_table_state, save_elo, save_elo_csv
 import pandas as pd
 import os
 
-df = pd.read_csv("data/E0_2526.csv")
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+csv_path = BASE_DIR / "data" / "E0_2526.csv"
+
+df = pd.read_csv(csv_path)
 
 ratings, table = compute_table_state(df) #defaulted to k=20, home_adv=80, base_rating=1500
 
@@ -14,8 +18,11 @@ power_rankings_df["Rank "] = power_rankings_df.index + 1
 
 os.makedirs("data", exist_ok=True)
 
-elo_df.to_csv("data/elo_ratings_2526.csv", index=False)
-power_rankings_df.to_csv("data/power_rankings_2526.csv", index=False)
+output_path_elo = BASE_DIR / "data" / "elo_ratings_2526.csv"
+output_path_power = BASE_DIR / "data" / "power_rankings_2526.csv"
+
+elo_df.to_csv(output_path_elo, index=False)
+power_rankings_df.to_csv(output_path_power, index=False)
 save_elo(ratings, season_code="2526")
 
 print(f"Elo ratings saved to /data folder.")

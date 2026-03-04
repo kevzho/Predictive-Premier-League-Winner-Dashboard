@@ -11,32 +11,6 @@ def get_all_fixtures():
     """Complete Premier League fixtures from Feb 18 - May 24, 2026 with actual kickoff times"""
     
     fixtures = [
-        # ========================================
-        # FEBRUARY 2026
-        # ========================================
-        # Monday, 23 February 2026
-        ['Everton', 'Man United', '2026-02-23', '15:00', 'EST'],
-        
-        # Friday, 27 February 2026
-        ['Wolves', 'Aston Villa', '2026-02-27', '15:00', 'EST'],
-        
-        # Saturday, 28 February 2026
-        ['AFC Bournemouth', 'Sunderland', '2026-02-28', '07:30', 'EST'],
-        ['Burnley', 'Brentford', '2026-02-28', '10:00', 'EST'],
-        ['Liverpool', 'West Ham', '2026-02-28', '10:00', 'EST'],
-        ['Newcastle', 'Everton', '2026-02-28', '10:00', 'EST'],
-        ['Leeds', 'Man City', '2026-02-28', '12:30', 'EST'],
-        
-        # ========================================
-        # MARCH 2026
-        # ========================================
-        
-        # Sunday, 1 March 2026
-        ['Brighton', 'Nottm Forest', '2026-03-01', '09:00', 'EST'],
-        ['Fulham', 'Spurs', '2026-03-01', '09:00', 'EST'],
-        ['Man United', 'C Palace', '2026-03-01', '09:00', 'EST'],
-        ['Arsenal', 'Chelsea', '2026-03-01', '11:30', 'EST'],
-        
         # Tuesday, 3 March 2026
         ['AFC Bournemouth', 'Brentford', '2026-03-03', '14:30', 'EST'],
         ['Everton', 'Burnley', '2026-03-03', '14:30', 'EST'],
