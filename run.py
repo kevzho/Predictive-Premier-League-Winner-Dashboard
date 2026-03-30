@@ -1,6 +1,6 @@
 from src.load_data import load_power_rankings, load_current_table
 from src.pipeline import run_simulation_pipeline
-from src.remaining_fixtures import get_all_fixtures
+from src.remaining_fixtures import get_remaining_fixtures
 
 import pandas as pd
 import os
@@ -24,7 +24,7 @@ def main(force_refresh=False):
     
     #Loading remaining fixtures
     print("Loading fixtures...")
-    fixtures_df = get_all_fixtures()
+    fixtures_df = get_remaining_fixtures()
     print(f"   Loaded {len(fixtures_df)} remaining fixtures")
     print(f"   Date range: {fixtures_df['Date'].min()} to {fixtures_df['Date'].max()}")
     

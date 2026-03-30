@@ -5,6 +5,7 @@ from copy import deepcopy
 
 from src.elo import elo_to_match_probs
 from src.table import update_table, rank_table
+from src.team_names import normalize_team
 
 def sample_match(win_h, draw, win_a):
     r = random.random()
@@ -37,8 +38,17 @@ def simulate_season(
 
         #go through every row in fixtures dataframe
         for _, row in fixtures_df.iterrows():
-            home = row["HomeTeam"]
-            away = row["AwayTeam"]
+            home_raw = row["HomeTeam"]
+            away_raw = row["AwayTeam"]
+            home = normalize_team(home_raw)
+            away = normalize_team(away_raw)
+
+            if home not in ratings or away not in ratings:
+                missing = [t for t in (home, away) if t not in ratings]
+                raise KeyError(
+                    f"Missing Elo rating(s) for {missing}. "
+                    f"Fixture raw values: {home_raw!r} vs {away_raw!r}"
+                )
 
             #get match probabilities based on current elo ratings
             win_h, draw, win_a = elo_to_match_probs(

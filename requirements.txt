@@ -13,6 +13,7 @@ streamlit==1.28.0
 
 #data fetching (for future V2)
 requests==2.31.0
+beautifulsoup4==4.12.3
 
 #utilities
 python-dateutil==2.8.2
