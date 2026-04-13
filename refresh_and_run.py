@@ -53,7 +53,7 @@ def main(launch_app=False):
     run_step("Run simulation pipeline", [PYTHON, "run.py"])
 
     if launch_app:
-        run_step("Launch app", [PYTHON, "app.py"])
+        run_step("Launch app", [PYTHON, "-m", "streamlit", "run", "app.py"])
 
 
 if __name__ == "__main__":
