@@ -18,6 +18,36 @@ DATA_DIR = PROJECT_ROOT / "data"
 
 URL = "https://www.espn.com/soccer/story/_/id/45522470/premier-league-fixtures-schedule-2025-26-full"
 
+MANUAL_FIXTURE_OVERRIDES = [
+    # Crystal Palace vs Manchester City was postponed; rescheduled for May 22, 2026.
+    {"HomeTeam": "Crystal Palace", "AwayTeam": "Man City", "Date": "2026-05-22"},
+]
+
+
+def _apply_manual_fixture_overrides(df: pd.DataFrame) -> pd.DataFrame:
+    if df.empty:
+        return df
+
+    updated = df.copy()
+
+    for fix in MANUAL_FIXTURE_OVERRIDES:
+        home = normalize_team(fix["HomeTeam"])
+        away = normalize_team(fix["AwayTeam"])
+        date = pd.to_datetime(fix["Date"]).strftime("%Y-%m-%d")
+
+        mask = (updated["HomeTeam"] == home) & (updated["AwayTeam"] == away)
+        if mask.any():
+            updated.loc[mask, "Date"] = date
+        else:
+            updated = pd.concat(
+                [updated, pd.DataFrame([{"HomeTeam": home, "AwayTeam": away, "Date": date}])],
+                ignore_index=True,
+            )
+
+    updated = updated.drop_duplicates(subset=["HomeTeam", "AwayTeam", "Date"]).reset_index(drop=True)
+    return updated
+
+
 def get_all_fixtures():
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(URL, headers=headers, timeout=30)
@@ -69,6 +99,8 @@ def get_all_fixtures():
 
     if df.empty:
         raise ValueError("No fixtures parsed from page")
+
+    df = _apply_manual_fixture_overrides(df)
 
     df["DateObj"] = pd.to_datetime(df["Date"])
     df = df.sort_values(["DateObj", "HomeTeam", "AwayTeam"]).drop(columns="DateObj")
